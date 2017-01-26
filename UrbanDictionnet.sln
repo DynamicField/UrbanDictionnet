@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26020.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanDictionnet", "UrbanDictionnet\UrbanDictionnet.csproj", "{18689676-50F8-499D-9F79-85664A456C3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanTesting", "UrbanTesting\UrbanTesting.csproj", "{5FF47AA2-D6A5-441D-84EE-AD5B6A8F6050}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{18689676-50F8-499D-9F79-85664A456C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18689676-50F8-499D-9F79-85664A456C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18689676-50F8-499D-9F79-85664A456C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FF47AA2-D6A5-441D-84EE-AD5B6A8F6050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF47AA2-D6A5-441D-84EE-AD5B6A8F6050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF47AA2-D6A5-441D-84EE-AD5B6A8F6050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF47AA2-D6A5-441D-84EE-AD5B6A8F6050}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
