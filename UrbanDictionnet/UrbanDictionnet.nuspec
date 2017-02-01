@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Urbandictionnet</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>jeuxjeux20</authors>
+    <owners>jeuxjeux20</owners>
+    <!-- <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://github.com/jeuxjeux20/Urbandictionnet</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> 
+    <description>$description$</description>
+    <releaseNotes>Better code construction and added some xml documentation and also added a random word function and escaped characters.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>urban api wrapper lol xd lmao</tags>
+  </metadata>
+</package>

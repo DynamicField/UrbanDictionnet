@@ -47,11 +47,18 @@
     <Compile Include="Entities\Definiton.cs" />
     <Compile Include="Entities\ResultType.cs" />
     <Compile Include="Entities\WordDefine.cs" />
+    <Compile Include="Entities\WordNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="UrbanDictionnet.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="package.nuspec">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
