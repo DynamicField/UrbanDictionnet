@@ -13,6 +13,9 @@ namespace UrbanDictionnet
     /// <summary>
     /// The main UrbanClient to instanciate in order to use the functions.
     /// </summary>
+    /// <remarks>
+    /// It has a funny name because in this library everything is urban.
+    /// </remarks>
     public class UrbanClient
     {
         /// <summary>
