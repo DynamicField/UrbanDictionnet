@@ -12,9 +12,9 @@ namespace UrbanDictionnet.Entities
     public class DefinitonData
     {
         /// <summary>
-        /// The definiton.
+        /// The definition.
         /// </summary>
-        public string Definiton { get; set; }
+        public string Definition { get; set; }
         /// <summary>
         /// The number of thumbs up.
         /// </summary>

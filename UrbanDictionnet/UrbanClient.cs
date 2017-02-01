@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using UrbanDictionnet.Entities;
-using static System.Security.SecurityElement;
 using RestSharp;
 using UrbanDictionnet.Entities.Vote;
 
@@ -28,7 +26,7 @@ namespace UrbanDictionnet
         /// </exception>
         public async Task<WordDefine> GetWordAsync(string query)
         {
-            var escapedQuery = Escape(query);
+            var escapedQuery = Uri.EscapeDataString(query);
             var result = await Rest.ExecuteAsync<WordDefine>(new RestRequest
             {
                 Resource = $"define?term={escapedQuery}",
