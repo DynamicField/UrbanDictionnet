@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("UrbanDictionnet")]
-[assembly: AssemblyDescription("An API async wrapper for urban dictionary")]
+[assembly: AssemblyDescription("An API async wrapper for urban dictionary that can search for words and get a random one")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("UrbanDictionnet")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("Copyright © 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("en-US")]
 // L'affectation de la valeur false à ComVisible rend les types invisibles dans cet assembly
@@ -36,5 +36,5 @@ using System.Runtime.InteropServices;
 
 internal static class Versions
 {
-    internal const string Version = "1.1.0.0"; // laziness
+    internal const string Version = "1.2.1.0"; // laziness
 }

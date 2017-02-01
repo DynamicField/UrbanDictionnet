@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace UrbanDictionnet.Entities
 {
-    public class Definiton
+    public class DefinitonData
     {
-        public Definiton() { }
-        public string DefinitonString { get; set; }
+        public DefinitonData() { }
+        public string Definiton { get; set; }
         public int ThumbsUp { get; set; }
         public string Author { get; set; }
         public string Word { get; set; }

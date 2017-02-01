@@ -15,7 +15,7 @@ namespace UrbanDictionnet.Entities
         /// <summary>
         /// The definitions. Yes it's called list but i don't want to add a reference to Newtonsoft.JSON and to RestSharp.Newtonsoft.JSON either so yeah.
         /// </summary>
-        public List<Definiton> List { get; set; }
+        public List<DefinitonData> List { get; set; }
         /// <summary>
         /// All the sounds links.
         /// </summary>
