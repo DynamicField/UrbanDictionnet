@@ -19,17 +19,18 @@ namespace UrbanDictionnet
         /// <param name="req"></param>
         /// <returns></returns>
         public async static Task<T> ExecuteAsync<T>(IRestRequest req) where T : new()
-        {            
+        {          
+            
             var client = new RestClient
             {
                 BaseUrl = BaseUrl
             };
-            var response = client.Execute<T>(req);
+            var response = await client.ExecuteTaskAsync<T>(req);
             if (response.ErrorException != null)
             {
-                throw new Exception("An error occured while resting lol", response.ErrorException);
+                throw new Exception("An error occured while processing a REST request", response.ErrorException);
             }
-            return await Task.FromResult(response.Data);
+            return response.Data;
         }
     }
 }
