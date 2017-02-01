@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using UrbanDictionnet.Entities;
 using static System.Security.SecurityElement;
 using RestSharp;
+using UrbanDictionnet.Entities.Vote;
+
 namespace UrbanDictionnet
 {
     /// <summary>
@@ -45,10 +47,7 @@ namespace UrbanDictionnet
         /// </remarks>
         public async Task<WordDefine> GetWordAsync(int defId)
         {
-            if (defId <= 0)
-            {
-                throw new ArgumentException("The definition id is equal or lower than 0.");
-            }
+            CheckDefinitionId(defId);
             var result = await Rest.ExecuteAsync<WordDefine>(new RestRequest
             {
                 Resource = $"define?defid={defId}",
@@ -59,6 +58,15 @@ namespace UrbanDictionnet
             }
             return result;
         }
+
+        private static void CheckDefinitionId(int defId)
+        {
+            if (defId <= 0)
+            {
+                throw new ArgumentException("The definition id is equal or lower than 0.");
+            }
+        }
+
         /// <summary>
         /// Get a random word from the API.
         /// </summary>
@@ -66,6 +74,27 @@ namespace UrbanDictionnet
         public async Task<WordDefine> GetRandomWordAsync()
         {
             return await Rest.ExecuteAsync<WordDefine>(new RestRequest("random"));
+        }
+        /// <summary>
+        /// Vote a definiton to be up or down.
+        /// </summary>
+        /// <param name="defId">The definiton id of the... definiton.</param>
+        /// <param name="direction">The direction, either Up or Down</param>
+        /// <returns>When awaited, returns a <see cref="VoteResponse"/>.</returns>
+        /// <exception cref="VoteException"/>
+        /// <remarks>
+        /// It will throw a <see cref="VoteException"/> if the <see cref="VoteResponse.Status"/> is <see cref="VoteStatus.Error"/>.
+        /// </remarks>
+        public async Task<VoteResponse> VoteOnDefinition(int defId,VoteDirection direction)
+        {
+            CheckDefinitionId(defId);
+            var lowered = direction.ToString().ToLower();
+            var result = await Rest.ExecuteAsync<VoteResponse>(new RestRequest($"vote?defid={defId}&direction={lowered}"));
+            if (result.Status == VoteStatus.Error)
+            {
+                throw new VoteException($"An error occured while sending the vote request, the definiton id ({defId}) is probably wrong.");
+            }
+            return result;
         }
     }
 }

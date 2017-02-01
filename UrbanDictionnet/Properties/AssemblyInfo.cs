@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("UrbanDictionnet")]
-[assembly: AssemblyDescription("An API async wrapper for urban dictionary that can search for words and get a random one")]
+[assembly: AssemblyDescription("An API async wrapper for urban dictionary that can search for words and get a random one as well as it can vote on a definition")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("UrbanDictionnet")]
@@ -36,5 +36,5 @@ using System.Runtime.InteropServices;
 
 internal static class Versions
 {
-    internal const string Version = "1.2.1.0"; // laziness
+    internal const string Version = "1.3.0.0"; // laziness
 }

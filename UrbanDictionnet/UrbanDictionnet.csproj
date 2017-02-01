@@ -46,6 +46,9 @@
     <Compile Include="Client.cs" />
     <Compile Include="Entities\Definiton.cs" />
     <Compile Include="Entities\ResultType.cs" />
+    <Compile Include="Entities\Vote\VoteException.cs" />
+    <Compile Include="Entities\Vote\VoteResponse.cs" />
+    <Compile Include="Entities\Vote\VoteStatus.cs" />
     <Compile Include="Entities\WordDefine.cs" />
     <Compile Include="Entities\WordNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,6 +57,9 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="UrbanDictionnet.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadmePleaseIfPossible.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
