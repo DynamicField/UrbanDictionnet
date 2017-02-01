@@ -20,15 +20,15 @@ namespace UrbanDictionnet
         /// </summary>
         /// <param name="query">The query to request, will be escaped later</param>
         /// <returns>When awaited, a <see cref="WordDefine"/>.</returns>
-        /// <exception cref="WordNotFoundException"/>
-        /// <remarks>
-        ///  Will throw <see cref="WordNotFoundException"/> if the returned <see cref="WordDefine.ResultType"/> is <see cref="ResultType.NoResults"/>
-        /// </remarks>
+        /// <exception cref="WordNotFoundException">
+        /// When the returned <see cref="WordDefine.ResultType"/> is <see cref="ResultType.NoResults"/>
+        /// </exception>
         public async Task<WordDefine> GetWordAsync(string query)
         {
+            var escapedQuery = Escape(query);
             var result = await Rest.ExecuteAsync<WordDefine>(new RestRequest
             {
-                Resource = $"define?term={Escape(query)}",
+                Resource = $"define?term={escapedQuery}",
             });
             if (result.ResultType == ResultType.NoResults)
             {
@@ -41,10 +41,9 @@ namespace UrbanDictionnet
         /// </summary>
         /// <param name="defId">The definiton id to request.</param>
         /// <returns>When awaited, a <see cref="WordDefine"/></returns>
-        /// <exception cref="WordNotFoundException"/>
-        /// <remarks>
-        ///  Will throw <see cref="WordNotFoundException"/> if the returned <see cref="WordDefine.ResultType"/> is <see cref="ResultType.NoResults"/>
-        /// </remarks>
+        /// <exception cref="WordNotFoundException">
+        /// When the returned <see cref="WordDefine.ResultType"/> is <see cref="ResultType.NoResults"/>
+        /// </exception>
         public async Task<WordDefine> GetWordAsync(int defId)
         {
             CheckDefinitionId(defId);
@@ -58,12 +57,16 @@ namespace UrbanDictionnet
             }
             return result;
         }
-
+        /// <summary>
+        /// Check the definiton id if it is lower or equal than 0
+        /// </summary>
+        /// <param name="defId">The id to check</param>
+        /// <exception cref="ArgumentException">When the <paramref name="defId"/> is lower or equal to 0</exception>
         private static void CheckDefinitionId(int defId)
         {
             if (defId <= 0)
             {
-                throw new ArgumentException("The definition id is equal or lower than 0.");
+                throw new ArgumentException("The definition id is equal or lower than 0.",nameof(defId));
             }
         }
 
@@ -81,10 +84,9 @@ namespace UrbanDictionnet
         /// <param name="defId">The definiton id of the... definiton.</param>
         /// <param name="direction">The direction, either Up or Down</param>
         /// <returns>When awaited, returns a <see cref="VoteResponse"/>.</returns>
-        /// <exception cref="VoteException"/>
-        /// <remarks>
-        /// It will throw a <see cref="VoteException"/> if the <see cref="VoteResponse.Status"/> is <see cref="VoteStatus.Error"/>.
-        /// </remarks>
+        /// <exception cref="VoteException">
+        /// When the <see cref="VoteResponse.Status"/> is <see cref="VoteStatus.Error"/>.
+        /// </exception>     
         public async Task<VoteResponse> VoteOnDefinition(int defId,VoteDirection direction)
         {
             CheckDefinitionId(defId);

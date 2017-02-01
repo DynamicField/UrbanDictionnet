@@ -12,11 +12,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance> 
     <description>$description$</description>
     <summary>A light async API wrapper for Urban Dictionary</summary>
-    <releaseNotes>Added a method to vote on a definition.</releaseNotes>
+    <releaseNotes>Code cleanup</releaseNotes>
     <copyright>MIT ok</copyright>
     <tags>urban api wrapper lol xd lmao</tags>
   </metadata>   
-    <files>
+    <!-- <files>
       <file src="ReadmePleaseIfPossible.txt" target=""/>
-    </files>
+    </files> -->
 </package>

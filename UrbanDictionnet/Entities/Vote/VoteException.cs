@@ -1,5 +1,8 @@
 ﻿namespace UrbanDictionnet.Entities.Vote
 {
+    /// <summary>
+    /// An exception thrown when a vote is errored.
+    /// </summary>
     [System.Serializable]
     public class VoteException : System.Exception
     {

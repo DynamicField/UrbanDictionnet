@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
     <Compile Include="Entities\Definiton.cs" />
     <Compile Include="Entities\ResultType.cs" />
     <Compile Include="Entities\Vote\VoteException.cs" />
@@ -53,6 +52,7 @@
     <Compile Include="Entities\WordNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rest.cs" />
+    <Compile Include="UrbanClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

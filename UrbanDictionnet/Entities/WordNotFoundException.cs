@@ -1,5 +1,8 @@
 ﻿namespace UrbanDictionnet.Entities
 {
+    /// <summary>
+    /// An exception thrown when a word isn't found
+    /// </summary>
     [System.Serializable]
     public class WordNotFoundException : System.Exception
     {
