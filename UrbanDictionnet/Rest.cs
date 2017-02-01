@@ -1,5 +1,6 @@
 ﻿using RestSharp;
 using System;
+using System.Net;
 using System.Threading.Tasks;
 namespace UrbanDictionnet
 {
@@ -15,12 +16,12 @@ namespace UrbanDictionnet
         /// <summary>
         /// Execute a <see cref="IRestRequest"/>
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="req"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">The type returned. (request's response is serialized)</typeparam>
+        /// <param name="req">The request to send</param>
+        /// <returns>Send a serialized <typeparamref name="T"/> object from the request's response.</returns>
         public async static Task<T> ExecuteAsync<T>(IRestRequest req) where T : new()
         {          
-            
+           
             var client = new RestClient
             {
                 BaseUrl = BaseUrl

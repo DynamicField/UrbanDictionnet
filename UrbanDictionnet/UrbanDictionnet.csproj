@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Entities\Definiton.cs" />
     <Compile Include="Entities\ResultType.cs" />
+    <Compile Include="Entities\Vote\VoteDirection.cs" />
     <Compile Include="Entities\Vote\VoteException.cs" />
     <Compile Include="Entities\Vote\VoteResponse.cs" />
     <Compile Include="Entities\Vote\VoteStatus.cs" />
