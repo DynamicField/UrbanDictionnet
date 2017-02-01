@@ -6,6 +6,6 @@ deploy:
   symbol_server:           # remove to push symbols to SymbolSource.org
   artifact: /.*\.nupkg/
 after_build:
-  - nuget pack
+  - nuget pack UrbanDictionnet.csproj
 before_build:
   - nuget restore
