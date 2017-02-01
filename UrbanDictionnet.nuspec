@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Urbandictionary</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>jeuxjeux20</authors>
+    <owners>jeuxjeux20</owners>
+    <licenseUrl>https://github.com/jeuxjeux20/UrbanDictionnet/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>http://github.com/jeuxjeux20/Urbandictionnet</projectUrl>
+    <iconUrl>http://i.imgur.com/1dw2mC3.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> 
+    <description>$description$</description>
+    <summary>A light async API wrapper for Urban Dictionary</summary>
+    <releaseNotes>Added a method to vote on a definition.</releaseNotes>
+    <copyright>MIT ok</copyright>
+    <tags>urban api wrapper lol xd lmao</tags>
+  </metadata>   
+    <files>
+      <file src="ReadmePleaseIfPossible.txt" target=""/>
+    </files>
+</package>
