@@ -5,5 +5,7 @@ deploy:
   skip_symbols: false
   symbol_server:           # remove to push symbols to SymbolSource.org
   artifact: /.*\.nupkg/
+after_build:
+  - nuget pack
 before_build:
   - nuget restore
