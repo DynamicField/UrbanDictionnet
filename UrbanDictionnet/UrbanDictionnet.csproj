@@ -55,10 +55,5 @@
     <None Include="packages.config" />
     <None Include="UrbanDictionnet.nuspec" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="package.nuspec">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
