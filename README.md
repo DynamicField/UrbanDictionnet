@@ -1,5 +1,5 @@
 # UrbanDictionnet
-An pretty like async API wrapper for Urbandictionary, this one only needs 1 dependency to work.
+A pretty light async API wrapper for Urbandictionary, this one only needs 1 dependency to work.
 
 ### What it can for now : 
 
