@@ -30,7 +30,7 @@ namespace UrbanDictionnet
             var result = await Rest.ExecuteAsync<WordDefine>(new RestRequest
             {
                 Resource = $"define?term={escapedQuery}",
-            });
+            }).ConfigureAwait(false);
             if (result.ResultType == ResultType.NoResults)
             {
                 throw new WordNotFoundException($"The word {query} wasn't found.");
@@ -51,7 +51,7 @@ namespace UrbanDictionnet
             var result = await Rest.ExecuteAsync<WordDefine>(new RestRequest
             {
                 Resource = $"define?defid={defId}",
-            });
+            }).ConfigureAwait(false);
             if (result.ResultType == ResultType.NoResults)
             {
                 throw new WordNotFoundException($"The definition with the id {defId} wasn't found.");
@@ -77,7 +77,7 @@ namespace UrbanDictionnet
         /// <returns>When awaited, a <see cref="WordDefine"/>.</returns>
         public async Task<WordDefine> GetRandomWordAsync()
         {
-            return await Rest.ExecuteAsync<WordDefine>(new RestRequest("random"));
+            return await Rest.ExecuteAsync<WordDefine>(new RestRequest("random")).ConfigureAwait(false);
         }
         /// <summary>
         /// Vote a definiton to be up or down.
@@ -92,7 +92,7 @@ namespace UrbanDictionnet
         {
             CheckDefinitionId(defId);
             var lowered = direction.ToString().ToLower();
-            var result = await Rest.ExecuteAsync<VoteResponse>(new RestRequest($"vote?defid={defId}&direction={lowered}"));
+            var result = await Rest.ExecuteAsync<VoteResponse>(new RestRequest($"vote?defid={defId}&direction={lowered}")).ConfigureAwait(false);
             if (result.Status == VoteStatus.Error)
             {
                 throw new VoteException($"An error occured while sending the vote request, the definiton id ({defId}) is probably wrong.");

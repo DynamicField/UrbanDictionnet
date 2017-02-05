@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("UrbanDictionnet")] // the title
-[assembly: AssemblyDescription("An API async wrapper for urban dictionary that can search for words and get a random one as well as it can vote on a definition")] // the god damn description
+[assembly: AssemblyDescription("An async API wrapper for urban dictionary that can search for words and get a random one as well as it can vote on a definition")] // the god damn description
 [assembly: AssemblyConfiguration("")] // WE DONT CARE
 [assembly: AssemblyCompany("")] // WE DONT CARE
 [assembly: AssemblyProduct("UrbanDictionnet")] // my product <3
@@ -35,8 +35,10 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion(Versions.Version)] // VERSION
 [assembly: AssemblyFileVersion(Versions.Version)] // useless
-
+/// <summary>
+/// Blah
+/// </summary>
 internal static class Versions
 {
-    internal const string Version = "1.3.2.1"; // laziness
+    internal const string Version = "1.3.3.0"; // laziness
 }

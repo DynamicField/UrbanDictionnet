@@ -25,7 +25,7 @@ namespace UrbanDictionnet
             {
                 BaseUrl = BaseUrl
             };
-            var response = await client.ExecuteTaskAsync<T>(req);
+            var response = await client.ExecuteTaskAsync<T>(req).ConfigureAwait(false);
             if (response.ErrorException != null)
             {
                 throw new Exception("An error occured while processing a REST request", response.ErrorException);
