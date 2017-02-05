@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UrbanDictionnet.Entities
+﻿namespace UrbanDictionnet.Entities
 {
     /// <summary>
-    /// A defintion (i had to rename it to definition data because of <see cref="DefinitonData.Definiton"/>)
+    /// A defintion (i had to rename it to definition data because of <see cref="DefinitonData.Definition"/>)
     /// </summary>
     public class DefinitonData
     {

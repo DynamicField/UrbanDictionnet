@@ -1,6 +1,5 @@
 ﻿using RestSharp;
 using System;
-using System.Net;
 using System.Threading.Tasks;
 namespace UrbanDictionnet
 {
