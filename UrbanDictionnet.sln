@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanDictionnet", "UrbanDic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanTest", "UrbanTest\UrbanTest.csproj", "{3F038555-B4D8-41C1-A606-FF35D2FA12AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestTest", "UnitTestTest\UnitTestTest.csproj", "{09FE5849-B391-4F3A-B376-6B894ED733CE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{3F038555-B4D8-41C1-A606-FF35D2FA12AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F038555-B4D8-41C1-A606-FF35D2FA12AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F038555-B4D8-41C1-A606-FF35D2FA12AC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09FE5849-B391-4F3A-B376-6B894ED733CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09FE5849-B391-4F3A-B376-6B894ED733CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09FE5849-B391-4F3A-B376-6B894ED733CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09FE5849-B391-4F3A-B376-6B894ED733CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

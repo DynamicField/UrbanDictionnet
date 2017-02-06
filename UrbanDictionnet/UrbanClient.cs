@@ -43,6 +43,9 @@ namespace UrbanDictionnet
         /// <exception cref="WordNotFoundException">
         /// When the returned <see cref="WordDefine.ResultType"/> is <see cref="ResultType.NoResults"/>
         /// </exception>
+        /// <exception cref="ArgumentException">
+        /// When <paramref name="defId"/> is negative.
+        /// </exception>
         public async Task<WordDefine> GetWordAsync(int defId)
         {
             CheckDefinitionId(defId);

@@ -18,6 +18,7 @@ namespace UrbanDictionnet
         /// <typeparam name="T">The type returned. (request's response is serialized)</typeparam>
         /// <param name="req">The request to send</param>
         /// <returns>Send a serialized <typeparamref name="T"/> object from the request's response.</returns>
+        [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public static async Task<T> ExecuteAsync<T>(IRestRequest req) where T : new()
         {
             var client = new RestClient
