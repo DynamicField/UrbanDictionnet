@@ -13,20 +13,19 @@ namespace UrbanUnitTests
     public class BaseTests
     {
         private UrbanClient Client { get; set; }
+
         [TestInitialize]
         public void Init()
         {
             Client = new UrbanClient();
         }
-
         
-        [TestMethod]
-       
+        [TestMethod]      
         public async Task FindsRandomWord()
         {            
             var result = await Client.GetRandomWordAsync();
             var nothingIsNull = CheckContent(result);
-            Assert.IsTrue(nothingIsNull,"That's ok !");
+            Assert.IsTrue(nothingIsNull);
             
         }
 
@@ -35,7 +34,7 @@ namespace UrbanUnitTests
         {
             var result = await Client.GetWordAsync("lol");
             var right = CheckContent(result);
-            Assert.IsTrue(right,"Excellent");
+            Assert.IsTrue(right);
         }
 
         [TestMethod]
