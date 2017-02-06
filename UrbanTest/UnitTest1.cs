@@ -1,17 +1,14 @@
 ﻿using System;
-using JetBrains.Annotations;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Threading.Tasks;
-using UrbanDictionnet;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using UrbanDictionnet;
+using System.Threading.Tasks;
 
-namespace UrbanUnitTests
+namespace UrbanTest
 {
     [TestClass]
-    [UsedImplicitly]
-    public class BaseTests
-    {
+    public class UnitTest1
+    {        
         private UrbanClient Client { get; set; }
 
         [TestInitialize]
@@ -58,5 +55,5 @@ namespace UrbanUnitTests
             }
             return notNull;
         }
+        }
     }
-}
