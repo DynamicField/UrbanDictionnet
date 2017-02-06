@@ -38,7 +38,7 @@ namespace UrbanTest
         }
 
         [Test]
-        public async Task VoteSucceds()
+        public async Task VoteSuceeds()
         {
             var randomWord = await Client.GetRandomWordAsync();
             var voteResult = await Client.VoteOnDefinition(randomWord.List[0].DefId, VoteDirection.Up);

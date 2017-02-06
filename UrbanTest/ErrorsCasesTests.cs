@@ -7,7 +7,7 @@ using UrbanDictionnet.Entities.Vote;
 namespace UrbanTest
 {
     [TestFixture]
-    public class ErrorsCases
+    public class ErrorsCasesTests
     {
         private UrbanClient Client { get; } = new UrbanClient();
         private Random Randomizer { get; } = new Random();

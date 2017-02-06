@@ -44,7 +44,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ErrorsCases.cs" />
+    <Compile Include="ErrorsCasesTests.cs" />
     <Compile Include="NormalCasesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
