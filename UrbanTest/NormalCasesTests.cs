@@ -65,11 +65,32 @@ namespace UrbanTest
             // try to get tags and sounds
             var result = await Client.GetRandomWordAsync();
             Assert.DoesNotThrow(() =>
-            {
-                
+            {               
                 var tags = result.Tags;                
                 var sounds = result.Sounds;
+                var firstDef = result[0];
                 // ReSharper restore UnusedVariable
+            });
+        }
+
+        [Test]
+        public async Task SettingWordIndexer()
+        {
+            var result = await Client.GetRandomWordAsync();
+            Assert.DoesNotThrow(() =>
+            {
+                result[0] = new DefinitonData();
+            });
+        }
+
+        [Test]
+        public async Task CanGetEnumeratorFromWord()
+        {
+            var result = await Client.GetRandomWordAsync();
+            Assert.DoesNotThrow(() =>
+            {
+                // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                result.GetEnumerator();
             });
         }
 
