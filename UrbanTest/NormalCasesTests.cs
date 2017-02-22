@@ -74,6 +74,7 @@ namespace UrbanTest
             
         }
 
+        [Test]
         public async Task PermalinkIsValid()
         {
             var r = await Client.GetRandomWordAsync();
