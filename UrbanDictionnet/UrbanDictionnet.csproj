@@ -51,6 +51,7 @@
     <Compile Include="Entities\Vote\VoteStatus.cs" />
     <Compile Include="Entities\WordDefine.cs" />
     <Compile Include="Entities\WordNotFoundException.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rest.cs" />
     <Compile Include="UrbanClient.cs" />

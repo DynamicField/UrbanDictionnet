@@ -75,6 +75,25 @@ namespace UrbanTest
         }
 
         [Test]
+        public void ToUpEmojiWorks()
+        {
+            Assert.That(VoteDirection.Up.ToEmoji(),Is.SameAs("👍"));
+        }
+
+        [Test]
+        public void ToDownEmojiWorks()
+        {
+            Assert.That(VoteDirection.Down.ToEmoji(),Is.SameAs("👎"));
+        }
+
+        [Test]
+        public async Task ToStringWorks()
+        {
+            var result = await Client.GetRandomWordAsync();
+            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+            Assert.DoesNotThrow(() => result[0].ToString());
+        }
+        [Test]
         public async Task PermalinkIsValid()
         {
             var r = await Client.GetRandomWordAsync();

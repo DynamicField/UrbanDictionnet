@@ -7,6 +7,19 @@ namespace UrbanDictionnet
     public class DefinitonData
     {
         /// <summary>
+        /// Converts this instance to a simplfied string
+        /// </summary>
+        /// <returns>A description of the definition</returns>
+        public override string ToString()
+        {
+            return $"Definition of {Word} by {Author} : \n" +
+                   $"{Definition}\n" +
+                   $"Example : \n" +
+                   $"{Example}\n" +
+                   $"👍 : {ThumbsUp} / 👎 : {ThumbsDown}";
+
+        }
+        /// <summary>
         /// The definition.
         /// </summary>
         public string Definition { get; set; }
