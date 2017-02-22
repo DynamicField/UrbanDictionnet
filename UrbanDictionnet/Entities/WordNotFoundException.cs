@@ -1,4 +1,4 @@
-﻿namespace UrbanDictionnet.Entities
+﻿namespace UrbanDictionnet
 {
     /// <summary>
     /// An exception thrown when a word isn't found

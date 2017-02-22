@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace UrbanDictionnet.Entities
+namespace UrbanDictionnet
 {
     /// <summary>
     /// A word definition.

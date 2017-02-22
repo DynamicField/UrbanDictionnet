@@ -39,5 +39,5 @@ using System.Runtime.InteropServices;
 /// </summary>
 internal static class Versions
 {
-    internal const string Version = "1.3.4.0"; // laziness
+    internal const string Version = "1.4.0.0"; // laziness
 }

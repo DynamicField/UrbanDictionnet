@@ -1,9 +1,9 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using NUnit.Framework;
 using UrbanDictionnet;
 using System.Threading.Tasks;
-using UrbanDictionnet.Entities;
-using UrbanDictionnet.Entities.Vote;
+
 
 namespace UrbanTest
 {
@@ -71,6 +71,13 @@ namespace UrbanTest
                 var firstDef = result[0];
                 // ReSharper restore UnusedVariable
             });
+            
+        }
+
+        public async Task PermalinkIsValid()
+        {
+            var r = await Client.GetRandomWordAsync();
+            Assert.That(Uri.IsWellFormedUriString(r[0].Permalink, UriKind.Absolute), Is.True);
         }
 
         [Test]
@@ -98,7 +105,12 @@ namespace UrbanTest
         private static bool CheckContent(WordDefine result)
         {
             var notNull = result.List.Any(); // There can still be no tags and sounds.
-            if (result.List.Any(item => item.GetType().GetProperties().Any(prop => prop.GetValue(item) == null)))
+            if ((from item 
+                 in result.List
+                 from prop 
+                 in item.GetType().GetProperties()
+                 where prop.GetValue(item) == null && prop.Name != "CurrentVote"
+                 select item).Any())
             {
                 return false;
             }

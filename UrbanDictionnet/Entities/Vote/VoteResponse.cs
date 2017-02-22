@@ -1,4 +1,4 @@
-﻿namespace UrbanDictionnet.Entities.Vote
+﻿namespace UrbanDictionnet
 {
     /// <summary>
     /// The response of a vote request.

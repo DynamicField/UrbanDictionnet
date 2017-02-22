@@ -1,4 +1,4 @@
-﻿namespace UrbanDictionnet.Entities.Vote
+﻿namespace UrbanDictionnet
 {
     /// <summary>
     /// An exception thrown when a vote is errored.

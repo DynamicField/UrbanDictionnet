@@ -1,4 +1,4 @@
-﻿namespace UrbanDictionnet.Entities.Vote
+﻿namespace UrbanDictionnet
 {
     /// <summary>
     /// The direction of a vote (used by <see cref="UrbanClient.VoteOnDefinition(int, VoteDirection)"/>)

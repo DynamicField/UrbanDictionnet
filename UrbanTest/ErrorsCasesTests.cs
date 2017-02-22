@@ -1,8 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
 using UrbanDictionnet;
-using UrbanDictionnet.Entities;
-using UrbanDictionnet.Entities.Vote;
 
 namespace UrbanTest
 {

@@ -1,4 +1,5 @@
-﻿namespace UrbanDictionnet.Entities
+﻿
+namespace UrbanDictionnet
 {
     /// <summary>
     /// A defintion (i had to rename it to definition data because of <see cref="DefinitonData.Definition"/>)
@@ -32,6 +33,14 @@
         /// <summary>
         /// The numbers of thumbs down.
         /// </summary>
-        public int ThumbsDown { get; set; }       
+        public int ThumbsDown { get; set; }
+        /// <summary>
+        /// The permalink of the definition <example>For "ayy" : ayy.urbanup.com/[defid]</example>
+        /// </summary>
+        public string Permalink { get; set; }
+        /// <summary>
+        /// The current vote attributed to this definition
+        /// </summary>
+        public VoteDirection? CurrentVote { get; set; }
     }
 }

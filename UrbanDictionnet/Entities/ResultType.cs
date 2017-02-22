@@ -1,4 +1,4 @@
-﻿namespace UrbanDictionnet.Entities
+﻿namespace UrbanDictionnet
 {
     /// <summary>
     /// The result of a <see cref="WordDefine"/>.

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using UrbanDictionnet.Entities;
 using RestSharp;
-using UrbanDictionnet.Entities.Vote;
+
 
 namespace UrbanDictionnet
 {

@@ -12,7 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance> 
     <description>$description$</description>
     <summary>A light async API wrapper for Urban Dictionary</summary>
-    <releaseNotes>Made WordDefine Enumerable from List.</releaseNotes>
+    <releaseNotes>Added permalink, added current vote, removed entities namespace.</releaseNotes>
     <copyright>MIT ok</copyright>
     <tags>urban api wrapper lol xd lmao dictionary urbandictionary definition</tags>
     
