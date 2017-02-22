@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("UrbanDictionnet")] // the title
-[assembly: AssemblyDescription("An async API wrapper for urban dictionary that can search for words and get a random one as well as it can vote on a definition")] // the god damn description
+[assembly: AssemblyDescription("A complete asynchrounous API wrapper for urban dictionary with 4 functionalities")] // the god damn description
 [assembly: AssemblyConfiguration("")] // WE DONT CARE
 [assembly: AssemblyCompany("")] // WE DONT CARE
 [assembly: AssemblyProduct("UrbanDictionnet")] // my product <3
