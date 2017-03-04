@@ -75,6 +75,21 @@ namespace UrbanTest
         }
 
         [Test]
+        public async Task GettingIdWordResults()
+        {
+            // get a random word
+            // try to get tags and sounds
+            var result = await Client.GetWordAsync(55);
+            Assert.DoesNotThrow(() =>
+            {
+                var tags = result.Tags;
+                var firstDef = result.Definition;
+                // ReSharper restore UnusedVariable
+            });
+
+        }
+
+        [Test]
         public void ToUpEmojiWorks()
         {
             Assert.That(VoteDirection.Up.ToEmoji(),Is.SameAs("👍"));
@@ -124,6 +139,7 @@ namespace UrbanTest
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         private static bool CheckContent(WordDefine result)
         {
+            
             var notNull = result.List.Any(); // There can still be no tags and sounds.
             if ((from item 
                  in result.List
@@ -136,5 +152,11 @@ namespace UrbanTest
             }
             return notNull;
         }
+        [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+        private static bool CheckContent(UniqueWordDefine result)
+        {
+            return result.GetType().GetProperties().All(item => item != null);
+        }
+        
     }
 }

@@ -12,7 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance> 
     <description>$description$</description>
     <summary>A light async API wrapper for Urban Dictionary</summary>
-    <releaseNotes>Added ToEmoji extension, overrided ToString() for DefinitionData to get a complete description.</releaseNotes>
+    <releaseNotes>Created UniqueWordDefine for getting a word from an ID.</releaseNotes>
     <copyright>MIT ok</copyright>
     <tags>urban api wrapper lol xd lmao dictionary urbandictionary definition</tags>
     

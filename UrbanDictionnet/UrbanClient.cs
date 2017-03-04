@@ -38,17 +38,17 @@ namespace UrbanDictionnet
         /// Get a definiton using a definition id (defid) as query.
         /// </summary>
         /// <param name="defId">The definiton id to request.</param>
-        /// <returns>When awaited, a <see cref="WordDefine"/></returns>
+        /// <returns>When awaited, an <see cref="UniqueWordDefine"/></returns>
         /// <exception cref="WordNotFoundException">
-        /// When the returned <see cref="WordDefine.ResultType"/> is <see cref="ResultType.NoResults"/>
+        /// When the returned <see cref="UniqueWordDefine.ResultType"/> is <see cref="ResultType.NoResults"/>
         /// </exception>
         /// <exception cref="ArgumentException">
         /// When <paramref name="defId"/> is negative.
         /// </exception>
-        public async Task<WordDefine> GetWordAsync(int defId)
+        public async Task<UniqueWordDefine> GetWordAsync(int defId)
         {
             CheckDefinitionId(defId);
-            var result = await Rest.ExecuteAsync<WordDefine>(new RestRequest
+            var result = await Rest.ExecuteAsync<UniqueWordDefine>(new RestRequest
             {
                 Resource = $"define?defid={defId}",
             }).ConfigureAwait(false);
