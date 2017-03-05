@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\DefinitonData.cs" />
+    <Compile Include="Entities\DefinitionData.cs" />
     <Compile Include="Entities\ResultType.cs" />
     <Compile Include="Entities\UniqueWordDefine.cs" />
     <Compile Include="Entities\Vote\VoteDirection.cs" />

@@ -18,12 +18,12 @@ namespace UrbanDictionnet
         /// The definition list.
         /// </summary>        
         [Obsolete("Prefer definition.")]
-        public List<DefinitonData> List { [ExcludeFromCodeCoverage] get; internal set; }
+        public List<DefinitionData> List { [ExcludeFromCodeCoverage] get; internal set; }
         /// <summary>
         /// The definition
         /// </summary>
 #pragma warning disable 618
-        public DefinitonData Definition => List[0];
+        public DefinitionData Definition => List[0];
 #pragma warning restore 618
     }
 }

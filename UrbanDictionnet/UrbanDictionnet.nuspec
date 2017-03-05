@@ -11,7 +11,7 @@
     <iconUrl>http://i.imgur.com/1dw2mC3.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance> 
     <description>$description$</description>
-    <summary>A light async API wrapper for Urban Dictionary</summary>
+    <summary>Grammar correction on some classes</summary>
     <releaseNotes>Created UniqueWordDefine for getting a word from an ID.</releaseNotes>
     <copyright>MIT ok</copyright>
     <tags>urban api wrapper lol xd lmao dictionary urbandictionary definition</tags>

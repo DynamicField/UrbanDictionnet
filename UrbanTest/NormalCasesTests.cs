@@ -121,7 +121,7 @@ namespace UrbanTest
             var result = await Client.GetRandomWordAsync();
             Assert.DoesNotThrow(() =>
             {
-                result[0] = new DefinitonData();
+                result[0] = new DefinitionData();
             });
         }
 

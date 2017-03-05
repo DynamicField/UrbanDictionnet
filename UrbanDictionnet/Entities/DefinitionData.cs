@@ -2,9 +2,9 @@
 namespace UrbanDictionnet
 {
     /// <summary>
-    /// A defintion (i had to rename it to definition data because of <see cref="DefinitonData.Definition"/>)
+    /// A defintion (i had to rename it to definition data because of <see cref="DefinitionData.Definition"/>)
     /// </summary>
-    public class DefinitonData
+    public class DefinitionData
     {
         /// <summary>
         /// Converts this instance to a simplfied string

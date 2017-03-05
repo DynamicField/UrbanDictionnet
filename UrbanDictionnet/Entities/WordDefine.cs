@@ -9,14 +9,14 @@ namespace UrbanDictionnet
     /// </summary>
     [SuppressMessage("ReSharper", "CollectionNeverUpdated.Global")]
     [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global")]
-    public class WordDefine : IEnumerable<DefinitonData>
+    public class WordDefine : IEnumerable<DefinitionData>
     {
         /// <summary>
         /// Refers to <see cref="List"/>
         /// </summary>
         /// <param name="index">The index</param>
-        /// <returns>A <see cref="DefinitonData"/> from <see cref="List"/></returns>
-        public DefinitonData this[int index]
+        /// <returns>A <see cref="DefinitionData"/> from <see cref="List"/></returns>
+        public DefinitionData this[int index]
         {
             get { return List[index]; }
             set { List[index] = value; }
@@ -32,7 +32,7 @@ namespace UrbanDictionnet
         /// <summary>
         /// The definitions. Yes it's called List but i don't want to add a reference to Newtonsoft.JSON and to RestSharp.Newtonsoft.JSON either so yeah.
         /// </summary>        
-        public List<DefinitonData> List { get; set; }
+        public List<DefinitionData> List { get; set; }
         /// <summary>
         /// All the sounds links.
         /// </summary>
@@ -40,8 +40,8 @@ namespace UrbanDictionnet
         /// <summary>
         /// Gets the enumerator of <see cref="List"/>
         /// </summary>
-        /// <returns>An enumerator with generic type <see cref="DefinitonData"/></returns>
-        public IEnumerator<DefinitonData> GetEnumerator()
+        /// <returns>An enumerator with generic type <see cref="DefinitionData"/></returns>
+        public IEnumerator<DefinitionData> GetEnumerator()
         {
             return List.GetEnumerator();
         }
