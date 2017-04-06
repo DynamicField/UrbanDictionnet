@@ -62,7 +62,7 @@ namespace UrbanTest
         public async Task VoteSuceeds()
         {
             var randomWord = await Client.GetRandomWordAsync();
-            var voteResult = await Client.VoteOnDefinition(randomWord.List[0].DefId, VoteDirection.Up);
+            var voteResult = await Client.VoteOnDefinition(randomWord.DefId, VoteDirection.Up);
             Assert.That(voteResult.Status, Is.EqualTo(VoteStatus.Saved).Or.EqualTo(VoteStatus.Duplicate)); // Can be duplicate, don't trust randomness :)
         }
 
@@ -131,13 +131,13 @@ namespace UrbanTest
         {
             var result = await Client.GetRandomWordAsync();
             // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-            Assert.DoesNotThrow(() => result[0].ToString());
+            Assert.DoesNotThrow(() => result.ToString());
         }
         [Test]
         public async Task PermalinkIsValid()
         {
             var r = await Client.GetRandomWordAsync();
-            Assert.That(Uri.IsWellFormedUriString(r[0].Permalink, UriKind.Absolute), Is.True);
+            Assert.That(Uri.IsWellFormedUriString(r.Permalink, UriKind.Absolute), Is.True);
         }
 
         [Test]
@@ -146,14 +146,14 @@ namespace UrbanTest
             var result = await Client.GetRandomWordAsync();
             Assert.DoesNotThrow(() =>
             {
-                result[0] = new DefinitionData();
+                result = new DefinitionData();
             });
         }
 
         [Test]
-        public async Task CanGetEnumeratorFromWord()
+        public async Task CanGetEnumeratorFromWords()
         {
-            var result = await Client.GetRandomWordAsync();
+            var result = await Client.GetRandomWordsAsync();
             Assert.DoesNotThrow(() =>
             {
                 // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
