@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Entities\DefinitionData.cs" />
     <Compile Include="Entities\ResultType.cs" />
+    <Compile Include="Entities\SingleList.cs" />
     <Compile Include="Entities\UniqueWordDefine.cs" />
     <Compile Include="Entities\Vote\VoteDirection.cs" />
     <Compile Include="Entities\Vote\VoteException.cs" />

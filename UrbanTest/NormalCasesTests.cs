@@ -15,11 +15,32 @@ namespace UrbanTest
         [Test]
         public async Task FindsRandomWord()
         {
-            var result = await Client.GetRandomWordAsync();
-            var nothingIsNull = CheckContent(result);
-            Assert.That(nothingIsNull, Is.True);
+            Assert.That(await Client.GetRandomWordAsync(), Is.Not.EqualTo(null));          
         }
-
+        [Test]
+        public async Task FindsRandomWords()
+        {
+            var randomWords = await Client.GetRandomWordsAsync();
+            // be surrrrrrre that every definition data are not null
+            var isCorrect = true;
+            foreach (var item in randomWords)
+            {
+                if (item == null)
+                {
+                    isCorrect = false;
+                    break;
+                }
+            }
+            Assert.That(isCorrect, Is.True);
+        }
+        [Test]
+        public async Task AutoCompletionWorks()
+        {
+            // get autocompletion for "ye"
+            var result = await Client.GetAutocompletionFor("ye");
+            // check if there is things in it
+            Assert.That(result.Any(), Is.True);
+        }
         [Test]
         public async Task FindsTestWord()
         {
@@ -45,49 +66,53 @@ namespace UrbanTest
             Assert.That(voteResult.Status, Is.EqualTo(VoteStatus.Saved).Or.EqualTo(VoteStatus.Duplicate)); // Can be duplicate, don't trust randomness :)
         }
 
-        [Test]
-        public async Task GettingVoteResults()
-        {
-            var word = await Client.GetRandomWordAsync();
-            var result = await Client.VoteOnDefinition(word.List[0].DefId, VoteDirection.Up);
-            Assert.DoesNotThrow(() =>
-            {
-                // ReSharper disable UnusedVariable
-                var up = result.Up;
-                var down = result.Down;
-            });
-        }
+        //--------------------------
+        // Testing auto properties is useless. :D
+        //--------------------------
 
-        [Test]
-        public async Task GettingWordResults()
-        {
-            // get a random word
-            // try to get tags and sounds
-            var result = await Client.GetRandomWordAsync();
-            Assert.DoesNotThrow(() =>
-            {               
-                var tags = result.Tags;                
-                var sounds = result.Sounds;
-                var firstDef = result[0];
-                // ReSharper restore UnusedVariable
-            });
+        //[Test]
+        //public async Task GettingVoteResults()
+        //{
+        //    var word = await Client.GetRandomWordAsync();
+        //    var result = await Client.VoteOnDefinition(word.List[0].DefId, VoteDirection.Up);
+        //    Assert.DoesNotThrow(() =>
+        //    {
+        //        // ReSharper disable UnusedVariable
+        //        var up = result.Up;
+        //        var down = result.Down;
+        //    });
+        //}
+
+        //[Test]
+        //public async Task GettingWordResults()
+        //{
+        //    // get a random word
+        //    // try to get tags and sounds
+        //    var result = await Client.GetRandomWordAsync();
+        //    Assert.DoesNotThrow(() =>
+        //    {               
+        //        var tags = result.Tags;                
+        //        var sounds = result.Sounds;
+        //        var firstDef = result[0];
+        //        // ReSharper restore UnusedVariable
+        //    });
             
-        }
+        //}
 
-        [Test]
-        public async Task GettingIdWordResults()
-        {
-            // get a random word
-            // try to get tags and sounds
-            var result = await Client.GetWordAsync(55);
-            Assert.DoesNotThrow(() =>
-            {
-                var tags = result.Tags;
-                var firstDef = result.Definition;
-                // ReSharper restore UnusedVariable
-            });
+        //[Test]
+        //public async Task GettingIdWordResults()
+        //{
+        //    // get a random word
+        //    // try to get tags and sounds
+        //    var result = await Client.GetWordAsync(55);
+        //    Assert.DoesNotThrow(() =>
+        //    {
+        //        var tags = result.Tags;
+        //        var firstDef = result.Definition;
+        //        // ReSharper restore UnusedVariable
+        //    });
 
-        }
+        //}
 
         [Test]
         public void ToUpEmojiWorks()

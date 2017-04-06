@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using RestSharp;
-
+using System.Collections.Generic;
 
 namespace UrbanDictionnet
 {
@@ -70,15 +70,29 @@ namespace UrbanDictionnet
                 throw new ArgumentException("The definition id is equal or lower than 0.",nameof(defId));
             }
         }
-
         /// <summary>
-        /// Get a random word from the API.
+        /// Gets 10 random words from the API.
+        /// </summary>
+        /// <returns>An array of ten <see cref="WordDefine"/></returns>
+        public async Task<List<DefinitionData>> GetRandomWordsAsync()
+        {
+            return (await Rest.ExecuteAsync<SingleList<DefinitionData>>(new RestRequest("random")).ConfigureAwait(false)).List;
+        }
+        /// <summary>
+        /// Get a random word from the API. Takes the first from <see cref="GetRandomWordsAsync"/>
         /// </summary>
         /// <returns>When awaited, a <see cref="WordDefine"/>.</returns>
-        public async Task<WordDefine> GetRandomWordAsync()
+        public async Task<DefinitionData> GetRandomWordAsync()
         {
-            return await Rest.ExecuteAsync<WordDefine>(new RestRequest("random")).ConfigureAwait(false);
+            return (await GetRandomWordsAsync())[0];
         }
+
+        public async Task<List<string>> GetAutocompletionFor(string query)
+        {
+            var escapedQuery = Uri.EscapeDataString(query);
+            return (await Rest.ExecuteAsync<List<string>>(new RestRequest($"autocomplete?term={escapedQuery}")));
+        }
+
         /// <summary>
         /// Vote a definiton to be up or down.
         /// </summary>
